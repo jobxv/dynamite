@@ -1,5 +1,6 @@
 export const getImageUrl = (image: string): string => {
-  const url = `http://localhost/etsy${image}`;
-  // console.log("image url", url);
-  return url;
+  if (image.startsWith("http") || image.startsWith("https")) {
+    return image;
+  }
+  return `http://localhost:8000/${image.startsWith("/") ? image.slice(1) : image}`;
 };
