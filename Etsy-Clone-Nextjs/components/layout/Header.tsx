@@ -39,7 +39,7 @@ const Header = ({ authenticated }: { authenticated: boolean }) => {
     []
   );
   const [isSeller, setIsSeller] = useState(false);
-  const { user, checkAuthStatus } = useAppStore();
+  const { user, checkAuthStatus, isAuthenticatedState } = useAppStore();
   const { products } = useProducts();
 
   useEffect(() => {
@@ -58,12 +58,7 @@ const Header = ({ authenticated }: { authenticated: boolean }) => {
     );
   }, [products, searchTerm]);
 
-  const [IsAuthenticated, setIsAuthenticated] = useState(authenticated);
 
-  useEffect(() => {
-    const token = getAuthTokenCookie();
-    setIsAuthenticated(!!token);
-  }, []);
 
   const [inputActive, setInputActive] = useState(false);
   const { cartItemsAmount } = useCart();
@@ -108,8 +103,8 @@ const Header = ({ authenticated }: { authenticated: boolean }) => {
           <>
             <span
               className={`absolute z-20 inset-0 transition-colors duration-200 ${categoriesOpen || inputActive
-                  ? "bg-black opacity-60 md:top-26"
-                  : "opacity-0 pointer-events-none -z-100"
+                ? "bg-black opacity-60 md:top-26"
+                : "opacity-0 pointer-events-none -z-100"
                 }`}
             ></span>
 
@@ -174,7 +169,7 @@ const Header = ({ authenticated }: { authenticated: boolean }) => {
                 </div>
               </div>
               <div className="flex items-center">
-                {!IsAuthenticated && (
+                {!isAuthenticatedState && (
                   <AnimatedLink href="/signin" className="text-xsm text-nowrap">
                     Sign in
                   </AnimatedLink>
@@ -191,11 +186,11 @@ const Header = ({ authenticated }: { authenticated: boolean }) => {
                   ""
                 )}
                 <HoverTipLink
-                  href={IsAuthenticated ? "/favorites" : undefined}
+                  href={isAuthenticatedState ? "/favorites" : undefined}
                   tip="Favorites"
                   hoverColor="#ccebff"
                   onClick={
-                    !IsAuthenticated
+                    !isAuthenticatedState
                       ? () => {
                         toast.error("You have to be signed in.");
                       }
@@ -208,19 +203,19 @@ const Header = ({ authenticated }: { authenticated: boolean }) => {
                   <GiftIcon className="size-6 hover:fill-[#122868]" />
                 </HoverTipLink>
                 <HoverTipLink
-                  href={IsAuthenticated ? "/cart" : undefined}
+                  href={isAuthenticatedState ? "/cart" : undefined}
                   tip="Cart"
                   hoverColor="#ccebff"
                   badge={cartItemsAmount}
                   onClick={
-                    !IsAuthenticated
+                    !isAuthenticatedState
                       ? () => toast.error("You have to be signed in.")
                       : undefined
                   }
                 >
                   <CartIcon className="size-6 hover:fill-[#122868]" />
                 </HoverTipLink>
-                {IsAuthenticated && (
+                {isAuthenticatedState && (
                   <AnimatedButton
                     className="flex gap-2 text-xsm"
                     onClick={logout}
