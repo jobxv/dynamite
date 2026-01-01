@@ -177,7 +177,7 @@ export default function CartPage() {
         <div>
           <p className="font-light">
             <span className="font-medium">Buy confidently</span> with
-            Etsy&apos;s Purchase Protection program for buyers, get a full
+            Dynamite&apos;s Purchase Protection program for buyers, get a full
             refund in the rare case your item doesn&apos;t arrive, arrives
             damaged, or isn&apos;t as described.
             <Link href="/purchase-protection" className="underline!">

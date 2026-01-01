@@ -31,12 +31,12 @@ const footerLinkSections = [
   },
   {
     title: "Sell",
-    links: ["Sell on Etsy", "Teams", "Forums", "Affiliates & creators"],
+    links: ["Sell on Dynamite", "Teams", "Forums", "Affiliates & creators"],
   },
   {
     title: "About",
     links: [
-      "Etsy, Inc.",
+      "Dynamite, Inc.",
       "Policies",
       "Investors",
       "Careers",

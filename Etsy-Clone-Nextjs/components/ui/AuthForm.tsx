@@ -180,7 +180,7 @@ export default function AuthForm({ type }: AuthFormProps) {
         {type === "register" && (
           <p className="text-sm text-gray-700 mb-4">
             By clicking {buttonText}, Continue with Google, Facebook, or Apple,
-            you agree to Etsy&apos;s{" "}
+            you agree to Dynamite&apos;s{" "}
             <Link href="#" className="text-[#4d6bc6] underline!">
               Terms of Use
             </Link>{" "}
@@ -239,7 +239,7 @@ export default function AuthForm({ type }: AuthFormProps) {
         {type === "signin" && (
           <p>
             By clicking {buttonText}, Continue with Google, Facebook, or Apple,
-            you agree to Etsy&apos;s{" "}
+            you agree to Dynamite&apos;s{" "}
             <Link href="#" className="text-black hover:underline">
               Terms of Use
             </Link>{" "}

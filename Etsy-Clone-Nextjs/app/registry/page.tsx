@@ -66,7 +66,7 @@ const FAQData = [
   },
   {
     id: "5",
-    question: "What can you register for on Etsy?",
+    question: "What can you register for on Dynamite?",
     answer:
       "The possibilities are endless for Dynamite Registry! If you're getting married, create an Dynamite wedding registry and fill it with items like personalized gifts, housewares, and more. If you're expecting parents ready to welcome a new child, you can create an Dynamite baby registry and add personalized presents, toys, nursery decor, and more. And you can celebrate occasions like birthdays, new homes, and anniversaries with special presents by creating an Dynamite gift registry. No matter what kind of Dynamite Registry you create, you'll be able to fill it with extraordinary items straight from independent sellers.",
   },

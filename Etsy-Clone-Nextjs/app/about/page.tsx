@@ -52,8 +52,8 @@ const Page = () => {
               <video
                 src="/animation1.mp4"
                 className={`relative w-full h-full object-cover transition-opacity duration-300 ${canPlay
-                    ? "opacity-100"
-                    : "opacity-0 absolute pointer-events-none"
+                  ? "opacity-100"
+                  : "opacity-0 absolute pointer-events-none"
                   }`}
                 autoPlay
                 loop
@@ -187,7 +187,7 @@ const HowEtsyWorks = () => {
               <h3 className="md:text-5xl text-xl pb-5">Shop securely </h3>
               <p className="md:text-lg lg:text-2xl text-sm sm:pr-15 lg:leading-10 font-gr md:font-g">
                 We provide the technology behind the Dynamite marketplace, helping
-                buyers and sellers connect and exchange on Etsy. Keeping those
+                buyers and sellers connect and exchange on Dynamite. Keeping those
                 connections safe, fun and secure is our priority, and we&apos;re
                 always{" "}
                 <span className="underline underline-offset-7 decoration-[0.5px] decoration-[#ffffffbf] hover:decoration-white">
@@ -225,7 +225,7 @@ const FindOut = () => {
         items={[
           <>
             <h3 className="md:text-[43px] text-3xl text-white font-light mb-4 text-center">
-              Where can I find news about Etsy?
+              Where can I find news about Dynamite?
             </h3>
             <p className="text-sm font-gr text-center">
               You&apos;ll find product announcements, company news and stories
@@ -268,7 +268,7 @@ const FindOut = () => {
               I&apos;m ready to shop. Where do I begin?
             </h3>
             <p className="text-sm font-gr text-center">
-              Visit etsy.com to start exploring. If you&apos;re looking for
+              Visit Dynamite.com to start exploring. If you&apos;re looking for
               something specific,{" "}
               <Link
                 className="underline underline-offset-2 hover:decoration-white"
@@ -298,7 +298,7 @@ const FindOut = () => {
               How do I become an Dynamite Seller?
             </h3>
             <p className="text-sm font-gr text-center">
-              If you want to sell your handmade, vintage or craft items on Etsy,
+              If you want to sell your handmade, vintage or craft items on Dynamite,
               check that they fit within our{" "}
               <Link
                 className="underline underline-offset-2 hover:decoration-white"
@@ -311,7 +311,7 @@ const FindOut = () => {
                 className="underline underline-offset-2 hover:decoration-white"
                 href="#"
               >
-                visit etsy.com/sell
+                visit Dynamite.com/sell
               </Link>{" "}
               to set up your shop. It only takes 20 cents and your imagination
               to set up a global business.
