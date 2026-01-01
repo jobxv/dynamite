@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gray-600: #595959; /* rgb(89, 89, 89) */
+  --color-gray-800: #222222; /* rgb(34, 34, 34) */
+  --color-gray-100: #e9e9e9; /* rgb(34, 34, 34) */
+  --color-green-400: #a0e193; /* rgb(160, 225, 147) */
+  --color-green-700: #0f743b; /* rgb(15, 116, 59) */
+  --color-orange-500: #f1641e; /* rgb(241, 100, 30) */
+  --color-orange-600: #cf4018; /* rgb(207, 64, 24) */
+
+  --text-xsm: 13px;
+
+  --breakpoint-lg: 1200px;
+  --breakpoint-md: 900px;
+  --breakpoint-sm: 640px;
+
+  --text-2xl: 27px;
+  --shadow-all-round: 0px 1px 3px 0px #0000004d, 0px 4px 8px 3px #00000026;
+  --shadow-full: 0 2px 10px rgb(0, 0, 0, 0.2);
+  --shadow-input: 0 0 0 2px #ffffff 0 0 0 2px #3b67d9;
+
+  --default-transition-timing-function: transform .2s cubic-bezier(.345,.115,.135,1.42),opacity .15s ease-out;
+  --container-xl: @apply max-w-[1400px] mx-auto px-4.5;
+}
+
+@theme inline {
+  --font-g: var(--font-guardian-egyp);
+  --font-gr: var(--font-graphik);
+}
+
+:focus-visible {
+  @apply focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black ;
+}
+
+.focus-blue {
+  @apply focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500;
+}
+
+.max-w {
+  max-width: 1400px;
+  padding-left: 18px;
+  padding-right: 18px;
+  @apply mx-auto;
+}
+.max-wsm {
+  max-width: 1300px;
+  @apply mx-auto lg:px-0 md:px-9 px-3 ;
+}
+
+.shadow-full {
+  @apply shadow-[0_2px_10px_rgb(0_0_0_/_20%)];
+}
+.hero-image-clip {
+  clip-path: circle(farthest-side at 100% 50%);
+}
+
+@media (max-width: 639px) {
+  .hero-image-clip {
+    clip-path: circle(farthest-side at 50% 100%);
+  }
+}
+.custom-hide-clear::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: hsl(95, 25%, 60%);
+  --color-primary-dark: hsl(95, 30%, 50%);
+  --color-secondary: hsl(210 40% 96.1%);
+  --color-accent: hsl(210 40% 96.1%);
+  --color-muted: hsl(210 40% 96.1%);
+  --color-border: hsl(214.3 31.8% 91.4%);
+  --color-ring: hsl(210 50% 55%);
+  --color-input: hsl(214.3 31.8% 91.4%);
+  --color-popover: hsl(0 0% 100%);
+  --color-card: hsl(0 0% 100%);
+  --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(222.2 84% 4.9%);
+  --color-card-foreground: hsl(222.2 84% 4.9%);
+  --color-popover-foreground: hsl(222.2 84% 4.9%);
+  --color-primary-foreground: hsl(210 40% 98%);
+  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
+  --color-accent-foreground: hsl(222.2 47.4% 11.2%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+  --breakpoint-xsm: 320px;
+
+  --shadow-full: 0 2px 10px rgb(0, 0, 0, 0.2);
+
+  --color-background-dark: hsl(215 20% 18%);
+  --color-foreground-dark: hsl(0 0% 100%);
+  --color-card-dark: hsl(215 20% 18%);
+  --color-card-foreground-dark: hsl(0 0% 100%);
+  --color-popover-dark: hsl(215 20% 18%);
+  --color-popover-foreground-dark: hsl(0 0% 100%);
+  --color-primary-dark: hsl(217, 70%, 65%);
+  --color-primary-foreground-dark: hsl(222.2 47.4% 11.2%);
+  --color-secondary-dark: hsl(210 15% 30%);
+  --color-secondary-foreground-dark: hsl(0 0% 100%);
+  --color-muted-dark: hsl(210 15% 30%);
+  --color-muted-foreground-dark: hsl(210 20.2% 75%);
+  --color-accent-dark: hsl(210 15% 30%);
+  --color-accent-foreground-dark: hsl(0 0% 100%);
+  --color-destructive-dark: hsl(0 62.8% 38%);
+  --color-destructive-foreground-dark: hsl(0 0% 100%);
+  --color-border-dark: hsl(210 15% 30%);
+  --color-input-dark: hsl(210 15% 30%);
+  --color-ring-dark: hsl(210 50% 55%);
+}
+
+.wiggly-line {
+  position: relative;
+}
+
+.wiggly-line::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,5 C20,-5 35,15 50,5 C65,-5 80,15 100,5' stroke='hsl(95, 25%, 60%)' stroke-width='2' fill='none' /%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 100px 10px;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scrollbar-gutter: stable;
+}
