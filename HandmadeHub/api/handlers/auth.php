@@ -8,6 +8,13 @@ header("Content-Type: application/json");
 // get the token 
 $token = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
 
+if (empty($token) && function_exists('apache_request_headers')) {
+    $requestHeaders = apache_request_headers();
+    if (isset($requestHeaders['Authorization'])) {
+        $token = $requestHeaders['Authorization'];
+    }
+}
+
 $token = str_replace("Bearer ", "", $token);
 
 // check if the token is found 

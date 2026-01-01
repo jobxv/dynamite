@@ -74,7 +74,7 @@ export const useAppStore = create<AppStore>((set, get) => ({
   cartItemsAmount: 0,
   favorites: [],
 
-  isAuthenticatedState: true,
+  isAuthenticatedState: false,
   isAuthenticating: false,
 
   isLoadingUser: false,
@@ -431,8 +431,8 @@ export const useAppStore = create<AppStore>((set, get) => ({
         );
         toast.error(
           response?.message ||
-            response?.error ||
-            `Failed to add product ${productId} to favorites.`
+          response?.error ||
+          `Failed to add product ${productId} to favorites.`
         );
 
         set((state) => ({
@@ -508,8 +508,8 @@ export const useAppStore = create<AppStore>((set, get) => ({
         );
         toast.error(
           response?.message ||
-            response?.error ||
-            `Failed to remove product ${productId} from favorites.`
+          response?.error ||
+          `Failed to remove product ${productId} from favorites.`
         );
 
         set((state) => ({

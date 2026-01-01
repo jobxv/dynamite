@@ -3,7 +3,7 @@ require_once __DIR__ . '/../../config/db.php';
 
 require_once 'auth.php';
 
-$upload_dir = __DIR__ . '/../../uploads//';
+$upload_dir = __DIR__ . '/../../uploads/';
 if (!is_dir($upload_dir)) {
     mkdir($upload_dir, 0775, true);
 }

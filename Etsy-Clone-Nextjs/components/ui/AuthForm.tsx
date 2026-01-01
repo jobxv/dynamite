@@ -1,6 +1,6 @@
 "use client";
 
-import type React from "react";
+import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
@@ -30,7 +30,12 @@ export default function AuthForm({ type }: AuthFormProps) {
     setIsSeller(false);
   };
   const { checkAuthStatus, isAuthenticatedState, signIn } = useAppStore();
-  if (isAuthenticatedState) router.push("/");
+
+  React.useEffect(() => {
+    if (isAuthenticatedState) {
+      router.push("/");
+    }
+  }, [isAuthenticatedState, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

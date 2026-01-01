@@ -24,7 +24,7 @@ if (!empty($errors)) {
 }
 
 try {
-    $stmt = $pdo->prepare("SELECT id, username, password_hash FROM users WHERE email = ?");
+    $stmt = $pdo->prepare("SELECT id, username, password_hash, is_seller FROM users WHERE email = ?");
     $stmt->execute([$email]);
     $found_user = $stmt->fetch();
 
@@ -51,7 +51,8 @@ try {
         'success' => true, 
         "message" => "Login successful.", 
         "user" => [ "id" => $found_user["id"], 
-                    "username" => $found_user ["username"] 
+                    "username" => $found_user ["username"],
+                    "is_seller" => (bool)$found_user["is_seller"]
         ],
         "token" => $token,
         "expires_at" => $expiry_time
